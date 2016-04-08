@@ -8,9 +8,9 @@ skill_keywords: [Java, Spring, Hibernate, PHP, HTML+CSS, JavaScript, Linux, Lara
 timezone: UTC
 encoding: "utf-8"
 
-url: http://localhost:4000
+url: http://kaiyuanliu.me
 baseurl:  "/"
-domain:    localhost:4000
+domain:    kaiyuanliu.me
 permalink:     /:categories/:year/:month/:title.html
 paginate_path: 'page:num'
 paginate:   10
