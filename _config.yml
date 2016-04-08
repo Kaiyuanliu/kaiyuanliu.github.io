@@ -1,20 +1,21 @@
-title: overtrue | 安正超博客
-name: overtrue
+title: Kaiyuan's Blog
+name: Kaiyuan Liu
 email: anzhengchao@gmail.com
-description: 安正超，网名overtrue，PHP工程师，从事web相关的开发工作。开源爱好者，GitHub:https://github.com/overtrue。
-keywords: Laravel,Laravel教程,Laravel安装,Laravel视频,安正超,overtrue,Pinyin,汉字转拼音
-skill_keywords: [PHP, Javascript, HTML+CSS, Linux, Laravel, Git, Mac, RESTful, Stackoverflow, Sublime Text, OmniGaffale, OmniPlan]
+description: Kaiyuan Liu, Driven, dynamic and highly qualified sofware engineer with a broad range of experience in technical software development. Experienced in a variety of platforms, languages and embedded systems
+keywords: Java, Spring, Hibernate, JBoss/Wildfly, PHP, Laravel
+skill_keywords: [Java, Spring, Hibernate, PHP, HTML+CSS, JavaScript, Linux, Laravel, Git, Mac, RESTful, Stackoverflow]
 
-timezone:    PRC
+timezone: UTC
 encoding: "utf-8"
 
-url: http://overtrue.me
+url: http://localhost:4000
 baseurl:  "/"
-domain:    overtrue.me
-permalink:     /articles/:year/:month/:title.html
+domain:    localhost:4000
+permalink:     /:categories/:year/:month/:title.html
 paginate_path: 'page:num'
 paginate:   10
-source_code: https://github.com/overtrue/overtrue.github.io
+source_code: https://github.com/kaiyuanliu/kaiyuanliu.github.io
+copy_right: 2016
 
 # Build settings
 markdown:    kramdown
@@ -26,24 +27,42 @@ source:      .
 destination: ./_site
 
 quiet:    false
-defaults: []
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      category: "articles"
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
 
 kramdown:
   input: GFM
-  enable_coderay: true
+  syntax_highlighter: rouge
 
 gems:
   - jemoji
   - rouge
-  # # # - jekyll-mentions
-  # - jekyll-sitemap
   - jekyll-html-pipeline
+  - jekyll-paginate
 
 disqus:
-  id: overtrueme
+  shortname: kaiyuanliu
 
-google:
-    analytics_id: UA-55452630-1
+analytics:
+  provider: google
+  google:
+    analytics_id: UA-76104500-1
+
+github:
+  user_name: kaiyuanliu
+
 
 # navigation
 navs:
@@ -56,22 +75,13 @@ navs:
     label: Open-Source
 
   -
-    href: https://github.com/overtrue
+    href: https://github.com/Kaiyuanliu
     label: GitHub
     target: _blank
-
-  -
-    href: http://weibo.com/44294631
-    label: Weibo
-    target: _blank
-
-  -
-    href: /bookmark
-    label: Bookmark
 
   -
     href: /about
     label: About
 
-popular_repos: ['pinyin', 'wechat', 'writor', 'laravel-wechat', 'laravel-lang', 'laravel-pinyin', 'latest-laravel', 'latest-lumen']
-contribute_repos: ['laravel/framework', 'tymondesigns/jwt-auth', 'caouecs/Laravel-lang']
+#popular_repos: ['pinyin', 'wechat', 'writor', 'laravel-wechat', 'laravel-lang', 'laravel-pinyin', 'latest-laravel', 'latest-lumen']
+#contribute_repos: ['laravel/framework', 'tymondesigns/jwt-auth', 'caouecs/Laravel-lang']

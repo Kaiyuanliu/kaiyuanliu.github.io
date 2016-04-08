@@ -1,6 +1,4 @@
-博客
+Kaiyuan's Personal Blog
 ===
 
-http://overtrue.me
-
-终于还是告别了wordpress。:see_no_evil:
+Journey begins here

@@ -1,14 +1,14 @@
 ---
 layout: default
-title: 开源项目
-keywords: 开源,open-source,GitHub,php,overtrue,开源项目
-description: 开源改变世界。我是一个热衷于开源的人，也多多少于参与与创建了一些开源项目，希望在开源这条路上能做出更大更多的贡献。
+title: Open Source
+keywords: open-source,GitHub,php,java
+description: Open source is a great way to disseminate technology to users. I love it.
 menu: Open-Source
 ---
 <section class="container">
     <header class="text-center">
-        <h1>开源项目</h1>
-        <p class="lead">共 <span class="repo-count">0</span> 个开源项目</p>
+        <h1>Open Source</h1>
+        <p class="lead"><span class="repo-count">0</span> open source repositories in total</p>
     </header>
     <div class="repo-list">
       <div class="blankslate"><h3>Loading...</h3></div>
@@ -27,7 +27,7 @@ menu: Open-Source
         <span class="meta-info tooltipped tooltipped-n" aria-label="[repo.forks_count] forks">
             <span class="octicon octicon-git-branch"></span> [repo.forks_count]
         </span>
-        <span class="meta-info tooltipped tooltipped-n" aria-label="最后更新于：[repo.updated_at]">
+        <span class="meta-info tooltipped tooltipped-n" aria-label="Latest Update：[repo.updated_at]">
             <span class="octicon octicon-clock"></span>
             <time datetime="[repo.updated_at]" title="[repo.updated_at]"> [repo.updated_at]</time>
         </span>
@@ -40,11 +40,12 @@ menu: Open-Source
         var repoListWrap = $('.repo-list');
         var repoList = $('<ul class="collection-listing clearfix"></ul>');
         var repoCount = 0;
-
-        $.get('https://api.github.com/users/overtrue/repos?type=owner',
+        var githubUsername = '{{ site.github.user_name }}';
+        $.get('https://api.github.com/users/' + githubUsername+ '/repos?type=owner',
           function(repos){
             if (!repos) {
-              repoListWrap.html('<div class="blankslate"><h3>加载失败</h3><p>请刷新或稍后再试...</p></div>');
+              repoListWrap.html('<div class="blankslate"><h3>Oops! Failed to load</h3><p>Please refresh ' +
+              'the page or try it again later...</p></div>');
             };
 
             repos = _.sortBy(repos, function(repo){
