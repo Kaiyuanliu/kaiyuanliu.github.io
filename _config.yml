@@ -1,6 +1,5 @@
 title: Kaiyuan's Blog
 name: Kaiyuan Liu
-email: anzhengchao@gmail.com
 description: Kaiyuan Liu, Driven, dynamic and highly qualified sofware engineer with a broad range of experience in technical software development. Experienced in a variety of platforms, languages and embedded systems
 keywords: Java, Spring, Hibernate, JBoss/Wildfly, PHP, Laravel
 skill_keywords: [Java, Spring, Hibernate, PHP, HTML+CSS, JavaScript, Linux, Laravel, Git, Mac, RESTful, Stackoverflow]
@@ -82,6 +81,3 @@ navs:
   -
     href: /about
     label: About
-
-#popular_repos: ['pinyin', 'wechat', 'writor', 'laravel-wechat', 'laravel-lang', 'laravel-pinyin', 'latest-laravel', 'latest-lumen']
-#contribute_repos: ['laravel/framework', 'tymondesigns/jwt-auth', 'caouecs/Laravel-lang']

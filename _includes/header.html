@@ -67,6 +67,9 @@
     <meta property="article:published_time" content="{{ page.date | date: "%Y-%m-%d" }}">
     {% endif %}
     <script src="/assets/vendor/jquery/dist/jquery.min.js"></script>
+    {% for js in page.header_js %}
+    <script src="/assets/js/{{ js }}"></script>
+    {% endfor %}
 </head>
 <body class="{{ page.class }}">
     <header class="site-header">
